@@ -6,19 +6,17 @@
 
 ---
 
-## 🎯 The Problem
+## The Problem
 
 The standard student approach to LendingClub data is to throw every column at XGBoost, hit AUC 0.95, and call it a day. **That model is useless in production** — most of the high-AUC features (payment history, recoveries, current balance) only exist *after* the loan is funded. They leak the answer.
 
 The actually interesting problem is harder:
 
-> **"At the moment a loan application arrives, can we predict whether it will be repaid — using only what we know at that moment?"**
-
-This is the question a real credit-underwriting team has to answer.
+> **"At the moment a loan application arrives, can we predict whether it will be repaid — using only what we know at that moment?"** This is the question a real credit-underwriting team has to answer.
 
 ---
 
-## 👥 Users & Jobs-to-be-Done
+## Users & Jobs-to-be-Done
 
 | User | Job-to-be-Done | Today's Workaround | Pain |
 |------|----------------|--------------------|------|
@@ -28,7 +26,7 @@ This is the question a real credit-underwriting team has to answer.
 
 ---
 
-## 💡 The Solution
+## The Solution
 
 A clean, leakage-free modeling pipeline that:
 
@@ -48,7 +46,7 @@ A clean, leakage-free modeling pipeline that:
 
 ---
 
-## 📊 Impact & Metrics
+## Impact & Metrics
 
 | Metric | Result |
 |--------|--------|
@@ -60,7 +58,7 @@ A clean, leakage-free modeling pipeline that:
 
 ---
 
-## 🛣️ What I'd Build Next
+## What I'd Build Next
 
 | Priority | Feature | Why this, why now |
 |----------|---------|-------------------|
@@ -72,19 +70,19 @@ A clean, leakage-free modeling pipeline that:
 
 ---
 
-## 👤 My Role
+## My Role
 
 **Group homework** for the ML course (MSBA, SCU).
 
 **What I personally owned:**
-- ✅ The "no leakage" principle — pushed the team to drop the easy features and accept a lower (but defensible) AUC
-- ✅ Feature engineering (DTI × interest, installment-to-income, credit history length)
-- ✅ Sub-grade ordinal encoding decision
-- ✅ Notebook structure and writeup
+- The "no leakage" principle — pushed the team to drop the easy features and accept a lower (but defensible) AUC
+- Feature engineering (DTI × interest, installment-to-income, credit history length)
+- Sub-grade ordinal encoding decision
+- Notebook structure and writeup
 
 ---
 
-## 🧠 What I Learned
+## What I Learned
 
 - **High AUC is suspicious.** When you see a 0.95 AUC on a credit dataset, the first question is "what leaked?" Most public ML notebooks on LendingClub don't pass this sniff test.
 - **Baselines matter.** A logistic regression at 0.78 makes XGBoost at 0.80 less impressive — and might be the right *production* choice for explainability. Always run the simple model first.
@@ -93,7 +91,7 @@ A clean, leakage-free modeling pipeline that:
 
 ---
 
-## 🔧 Tech Stack
+## Tech Stack
 
 | Layer | Technology |
 |-------|------------|
@@ -105,18 +103,18 @@ A clean, leakage-free modeling pipeline that:
 
 ---
 
-## 🏃 How to Run
+## How to Run
 
 1. Place `loans (1).csv` (~463 MB, not in repo) in the project folder
 2. Open `HW1_Final.ipynb` in Jupyter
 3. Select **Python 3 (ipykernel)** kernel
 4. Run all cells (Kernel → Restart & Run All)
 
-> ⚠️ XGBoost on Mac requires `brew install libomp`.
+> XGBoost on Mac requires `brew install libomp`.
 
 ---
 
-## 📁 Files
+## Files
 
 - `HW1_Final.ipynb` — Complete analysis (EDA, feature engineering, model comparison, results)
 - `LoanDataDictionary.xlsx` — Reference for the 74 raw columns
