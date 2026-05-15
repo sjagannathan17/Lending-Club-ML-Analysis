@@ -106,7 +106,7 @@ A clean, leakage-free modeling pipeline that:
 ## How to Run
 
 1. Place `loans (1).csv` (~463 MB, not in repo) in the project folder
-2. Open `HW1_Final.ipynb` in Jupyter
+2. Open `loan_default_model.ipynb` in Jupyter
 3. Select **Python 3 (ipykernel)** kernel
 4. Run all cells (Kernel → Restart & Run All)
 
@@ -116,9 +116,9 @@ A clean, leakage-free modeling pipeline that:
 
 ## Files
 
-- `HW1_Final.ipynb` — Complete analysis (EDA, feature engineering, model comparison, results)
-- `LoanDataDictionary.xlsx` — Reference for the 74 raw columns
-- `Group Homework 1 (2).pdf` — Original assignment brief
+- `loan_default_model.ipynb` — Complete analysis (EDA, feature engineering, model comparison, results)
+- `docs/LoanDataDictionary.xlsx` — Reference for the 74 raw columns
+- `docs/original_assignment_brief.pdf` — Original assignment brief
 
 ---
 
